@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chae Hyun - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-gradient-overlay {
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(59, 130, 246, 0.05));
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <div class="relative min-h-screen overflow-hidden">
+        <!-- Video Background -->
+        <div class="fixed inset-0 -z-10 h-full w-full overflow-hidden">
+            <div class="absolute inset-0 bg-white/60 backdrop-blur-[3px] z-10"></div>
+            <video
+                id="bgVideo"
+                autoplay
+                loop
+                muted
+                playsinline
+                class="absolute h-full w-full object-cover opacity-75"
+            >
+                <source src="/background.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 min-h-screen flex items-center justify-center">
+            <div class="container mx-auto px-4 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-blue-800">
+                        Hello, I'm Chae Hyun
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-800">
+                        Data Analyst & Information Systems Professional
+                    </p>
+                    <p class="text-lg mb-12 text-gray-600">
+                        Passionate about leveraging data and technology to drive business transformation
+                    </p>
+                    <a href="/portfolio.html" 
+                       class="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-blue-800 rounded-lg hover:bg-blue-700 transition-colors">
+                        View My Portfolio
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Slow down the background video
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('bgVideo');
+            if (video) {
+                video.playbackRate = 0.5;
+            }
+        });
+    </script>
+</body>
+</html>
